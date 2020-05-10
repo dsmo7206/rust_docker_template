@@ -1,0 +1,17 @@
+[package]
+name = "system_test"
+version = "0.1.0"
+edition = "2018"
+authors = ["David Smoker <dsmoker@gmail.com>"]
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[dependencies]
+tonic = "0.1"
+prost = "0.6"
+tokio = { version = "0.2", features = ["macros"] }
+
+[build-dependencies]
+tonic-build = "0.1.0"
