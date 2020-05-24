@@ -1,5 +1,5 @@
 syntax = "proto3";
-package rust_backend;
+package echo_package;
 
 service EchoService {
     rpc Echo (EchoRequest) returns (EchoResponse);

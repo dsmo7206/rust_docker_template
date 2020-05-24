@@ -9,7 +9,7 @@ WORKDIR /app
 # Do the fake build
 COPY server/Cargo.toml Cargo.toml
 RUN mkdir src
-RUN echo "fn main() { println!(\"if you see this, the build broke\"); }" > src/main.rs
+RUN echo "fn main() { println!(\"if you see this, the build broke.\"); }" > src/main.rs
 COPY server/build.rs .
 COPY proto proto
 RUN RUSTFLAGS=-Clinker=musl-gcc cargo build --release --target=x86_64-unknown-linux-musl
